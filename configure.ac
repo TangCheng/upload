@@ -20,7 +20,6 @@ AC_PROG_CC
 
 
 
-PKG_CHECK_MODULES(UPLOAD, [ ])
 
 
 

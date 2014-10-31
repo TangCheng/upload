@@ -5,19 +5,18 @@
 AM_CPPFLAGS = \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \
 	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
-	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\" \
-	$(UPLOAD_CFLAGS)
+	-DPACKAGE_DATA_DIR=\""$(pkgdatadir)"\"
 
 AM_CFLAGS =\
 	 -Wall\
 	 -g
 
-bin_PROGRAMS = upload
+bin_PROGRAMS = upload.fcgi
 
-upload_SOURCES = \
+upload_fcgi_SOURCES = \
 	main.c
 
-upload_LDFLAGS = 
+upload_fcgi_LDFLAGS = 
 
-upload_LDADD = $(UPLOAD_LIBS) -lfcgi
+upload_fcgi_LDADD = -lfcgi
 
