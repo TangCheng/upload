@@ -14,6 +14,7 @@ AM_CFLAGS =\
 bin_PROGRAMS = upload.fcgi
 
 upload_fcgi_SOURCES = \
+	multipart_parser.c \
 	main.c
 
 upload_fcgi_LDFLAGS = 
