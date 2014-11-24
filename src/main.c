@@ -27,11 +27,6 @@ int on_part_data(multipart_parser *parser, const char *data, size_t length)
 int on_part_data_end(multipart_parser *parser)
 {
     system("mv /var/cache/firmware-hi3518.bin /var/cache/firmware/");
-    FCGI_FILE *fileOut = FCGI_fopen("/var/cache/firmware/upgrade-start", "w");
-    if (fileOut)
-    {
-        FCGI_fclose(fileOut);
-    }
 
     return 0;
 }
